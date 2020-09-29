@@ -10,7 +10,7 @@ const app=express()
 app.use(cors())
 app.use(express.json())
 app.use(admin_quest_router)
-
+app.use(express.static('./frontend/dist'))
 
 
 app.listen(PORT,()=>{
