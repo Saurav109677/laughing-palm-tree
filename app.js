@@ -4,7 +4,7 @@ require('./db/mongoose')
 const admin_quest_router= require('./routers/adminQuestRouter')
 const AdminQuest= require('./models/AdminQuest')
 
-const PORT = 9000 || process.env.PORT
+const PORT =  process.env.PORT || 9000
 const app=express()
 
 app.use(cors())

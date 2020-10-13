@@ -7,7 +7,7 @@ mongoose.connect(process.env.DATABASE_URL,
         useFindAndModify:false   // to remove deprecation warning
     }
 ).then(
-    (data)=>console.log("Db connected successfuly"+process.env.DATABASE_URL)
+    (data)=>console.log("Db connected successfuly"+"mongodb://127.0.0.1:27017/task-manager-api")
 ).catch(
     (err)=>console.log("error")
 )
