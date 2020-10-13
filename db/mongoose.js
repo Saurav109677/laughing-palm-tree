@@ -1,4 +1,5 @@
 const  mongoose = require('mongoose')
+require('dotenv').config();
 
 mongoose.connect(process.env.DATABASE_URL,
     {
@@ -7,7 +8,7 @@ mongoose.connect(process.env.DATABASE_URL,
         useFindAndModify:false   // to remove deprecation warning
     }
 ).then(
-    (data)=>console.log("Db connected successfuly"+process.env.DATABASE_URL)
+    (data)=>console.log("Db connected successfuly")
 ).catch(
     (err)=>console.log("error")
 )

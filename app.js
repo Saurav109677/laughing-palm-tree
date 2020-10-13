@@ -1,9 +1,10 @@
 const express = require('express')
 const cors=require('cors')
 require('./db/mongoose')
-require('dotenv/config')
+
 const admin_quest_router= require('./routers/adminQuestRouter')
 const AdminQuest= require('./models/AdminQuest')
+const { replaceOne } = require('./models/AdminQuest')
 
 const PORT =  process.env.PORT || 9000
 const app=express()
